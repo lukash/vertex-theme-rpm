@@ -3,15 +3,17 @@
 %define theme_name Vertex
 
 
-Summary:    A theme for GTK
-Name:       vertex-theme
-Version:    20170128
-Release:    %mkrel 4
-URL:        https://github.com/horst3180/vertex-theme
-License:    GPLv3
-Group:      Graphical desktop/GNOME
-Source0:    https://github.com/horst3180/%{name}/archive/%{version}.tar.gz
-Buildarch:  noarch
+Summary:        A theme for GTK
+Name:           vertex-theme
+Version:        20170128
+Release:        1%{?dist}
+URL:            https://github.com/horst3180/vertex-theme
+License:        GPLv3
+Group:          Graphical desktop/GNOME
+Source0:        https://github.com/horst3180/%{name}/archive/%{version}.tar.gz
+Buildarch:      noarch
+BuildRequires:  autoconf
+BuildRequires:  automake
 
 %description
 Vertex is a theme for GTK 3, GTK 2, Gnome-Shell and Cinnamon. It supports
@@ -36,7 +38,7 @@ Files which are common to all %{theme_name} themes.
 Summary:        %{theme_name} GTK+2 themes
 Group:          Graphical desktop/Other
 Requires:       %{name}-common = %{version}-%{release}
-Requires:       gtk2-murrine-engine
+Requires:       gtk-murrine-engine
 
 %description -n %{sourcename}-gtk2-theme
 Themes for GTK+2 as part of the %{theme_name} theme.
@@ -46,7 +48,7 @@ Themes for GTK+2 as part of the %{theme_name} theme.
 Summary:        %{theme_name} GTK+2 themes
 Group:          Graphical desktop/Other
 Requires:       %{name}-common = %{version}-%{release}
-Requires:       gtk2-murrine-engine
+Requires:       gtk-murrine-engine
 
 %description -n %{sourcename}-dark-gtk2-theme
 Themes for GTK+2 as part of the %{theme_name} theme.
@@ -57,7 +59,7 @@ This package contains dark variant.
 Summary:        %{theme_name} GTK+2 themes
 Group:          Graphical desktop/Other
 Requires:       %{name}-common = %{version}-%{release}
-Requires:       gtk2-murrine-engine
+Requires:       gtk-murrine-engine
 
 %description -n %{sourcename}-light-gtk2-theme
 Themes for GTK+2 as part of the %{theme_name} theme.
